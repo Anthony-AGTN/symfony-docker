@@ -30,6 +30,8 @@ services:
       MYSQL_PASSWORD: symfony
     ports:
       - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql   # volume nommé pour persister les données
 
   adminer:
     image: adminer
@@ -45,3 +47,7 @@ services:
     ports:
       - "8025:8025"  # interface web: http://localhost:8025
       - "1025:1025"  # port SMTP
+
+volumes:
+  db_data:   # déclaration du volume
+

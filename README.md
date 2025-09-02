@@ -74,6 +74,7 @@ Mailhog: http://localhost:8025
 Symfony CLI et Composer dans le conteneur PHP
 
 ```bash
+docker compose exec php bash
 docker compose exec php symfony -v
 docker compose exec php composer -v
 docker compose exec php php bin/console
